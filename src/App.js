@@ -1,4 +1,5 @@
 import "./App.css";
+import Hero from "./components/hero";
 import React from "react";
 import { GlobalStyles } from "./components/GlobalStyles";
 import { ThemeProvider } from "styled-components";
@@ -18,6 +19,7 @@ function App() {
     <>
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
+        <Hero />
         <Toggle theme={theme} toggleTheme={toggleTheme} />
       </ThemeProvider>
     </>

@@ -5,10 +5,20 @@ const Header = () => {
     <HeaderContainer>
       <HeaderLogo>Rule of Thumb.</HeaderLogo>
       <NavHeader>
-        <NavItem> Past Trials</NavItem>
-        <NavItem> How It Works</NavItem>
-        <NavItem> Log In / Sign Up</NavItem>
-        <NavItem> SearchIcon</NavItem>
+        <NavItem>
+          <a href="pastTrials"> Past Trials</a>
+        </NavItem>
+        <NavItem>
+          <a href="howItWorks"> How It Works</a>
+        </NavItem>
+        <NavItem>
+          <a href="login"> Log In / Sign Up</a>
+        </NavItem>
+        <NavItem>
+          <a href="search">
+            <img src="./search.svg" alt="search"></img>
+          </a>
+        </NavItem>
       </NavHeader>
     </HeaderContainer>
   );
