@@ -9,7 +9,11 @@ const Card = ({ children, className }) => {
 
 Card.propTypes = {
   children: node.isRequired,
-  className: string.isRequired,
+  className: string,
+};
+
+Card.defaultProps = {
+  variant: "card",
 };
 
 export default Card;
