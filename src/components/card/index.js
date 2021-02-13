@@ -3,32 +3,13 @@ import { string, node } from "prop-types";
 
 import { CardContainer } from "./styles";
 
-const Card = ({ children, variant, width, height, imageUrl }) => {
-  return (
-    <CardContainer
-      className={`variant-${variant}`}
-      imageUrl={imageUrl}
-      width={width}
-      height={height}
-    >
-      {children}
-    </CardContainer>
-  );
+const Card = ({ children, className }) => {
+  return <CardContainer className={className}>{children}</CardContainer>;
 };
 
 Card.propTypes = {
   children: node.isRequired,
-  variant: string,
-  height: string,
-  width: string,
-  imageUrl: string,
-};
-
-Card.defaultProps = {
-  variant: "default",
-  height: "auto",
-  width: "auto",
-  imageUrl: "./defaultAvatar.png",
+  className: string.isRequired,
 };
 
 export default Card;
