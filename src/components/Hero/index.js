@@ -51,14 +51,14 @@ const Hero = ({ theme }) => {
         </VoteBox>
       </HeroWrapper>
       <HeroFooter>
+        <FooterMessage>CLOSING IN</FooterMessage>
         <ThemeProvider
           theme={theme.body === lightTheme.body ? darkTheme : lightTheme}
         >
-          <FooterMessage>CLOSING IN</FooterMessage>
+          <FooterDaysLeft>
+            <strong>22</strong> days
+          </FooterDaysLeft>
         </ThemeProvider>
-        <FooterDaysLeft>
-          <strong>22</strong> days
-        </FooterDaysLeft>
       </HeroFooter>
     </HeroContainer>
   );
