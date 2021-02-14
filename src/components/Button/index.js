@@ -13,12 +13,13 @@ const Button = ({ className, children, handleClick }) => {
 
 Button.propTypes = {
   children: node,
-  handleClick: func.isRequired,
+  handleClick: func,
   className: string.isRequired,
 };
 
 Button.defaultProps = {
   children: "",
+  handleClick: () => {},
 };
 
 export default Button;
