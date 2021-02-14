@@ -9,8 +9,10 @@ export const HeaderContainer = styled.nav`
     rgba(${({ theme }) => theme.lightBackground}, 0.4),
     rgba(0, 0, 0, 0)
   );
+  color: ${({ theme }) => theme.text};
   padding: 0 8%;
 `;
+
 export const HeaderLogo = styled.div`
   width: 40%;
   display: flex;
@@ -18,6 +20,7 @@ export const HeaderLogo = styled.div`
   font-size: 2.5em;
   font-weight: 800;
 `;
+
 export const NavHeader = styled.ul`
   width: 60%;
   height: 100%;
