@@ -6,6 +6,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./utils/themes";
 import { Toggle } from "./components/toggle";
 import { useDarkMode } from "./hooks/useDarkMode";
+import Footer from "./components/footer";
 
 function App() {
   const [theme, setTheme] = useDarkMode();
@@ -21,6 +22,7 @@ function App() {
         <GlobalStyles />
         <Hero />
         <Toggle theme={theme} toggleTheme={toggleTheme} />
+        <Footer />
       </ThemeProvider>
     </>
   );
