@@ -4,3 +4,17 @@ export const MainContent = styled.main`
   margin: 3% 8%;
   height: fit-content;
 `;
+
+export const CandidatesContainer = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -20px;
+  margin-left: -20px;
+  justify-content: center;
+`;
+
+export const SectionTitle = styled.h2`
+  font-size: 3em;
+  font-weight: 300;
+  margin: 40px 0;
+`;
