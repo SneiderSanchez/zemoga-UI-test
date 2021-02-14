@@ -1,19 +1,18 @@
 import React from "react";
-
 import { Footer, SocialMedia } from "./styles";
-
+import { Link } from "react-router-dom";
 const FooterComponent = () => {
   return (
     <Footer>
       <ul>
         <li>
-          <a href="/terms">Terms and Conditions</a>
+          <Link to="/terms">Terms and Conditions</Link>
         </li>
         <li>
-          <a href="/pricacy">Privacy Policy</a>
+          <Link to="/privacy">Privacy Policy</Link>
         </li>
         <li>
-          <a href="/contactUs">Contact Us</a>
+          <Link to="/contactUs">Contact Us</Link>
         </li>
       </ul>
       <SocialMedia>

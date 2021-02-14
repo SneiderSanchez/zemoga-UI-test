@@ -25,4 +25,8 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 14px;
     }
   }
+  a{
+    text-decoration:none;
+    color:inherit;
+  }
 `;
