@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { device } from "../../utils/breakpoints";
+import { Link } from "react-router-dom";
 
 export const HeaderContainer = styled.nav`
   display: flex;
-  justify-content: space-around;
+
   align-items: center;
   height: 140px;
   background: linear-gradient(
@@ -17,10 +18,11 @@ export const HeaderContainer = styled.nav`
   }
 `;
 
-export const HeaderLogo = styled.div`
-  width: 40%;
+export const HeaderLogo = styled(Link)`
+  width: fit-content;
   display: flex;
   justify-content: space-between;
+  justify-content: flex-start;
   font-size: 2.5em;
   font-weight: 800;
   @media only screen and ${device.sm}, only screen and ${device.md} {
@@ -30,15 +32,13 @@ export const HeaderLogo = styled.div`
 `;
 
 export const NavHeader = styled.ul`
-  width: 60%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   list-style: none;
-  @media only screen and ${device.sm}, only screen and ${device.md} {
-    width: 70%;
-  }
+  flex: 1;
+  text-align: center;
 `;
 
 export const NavItem = styled.li`
@@ -49,8 +49,6 @@ export const NavItem = styled.li`
   a {
     display: flex;
     align-items: center;
-    text-decoration: none;
-    color: inherit;
     img {
       height: 1em;
       width: 1em;
