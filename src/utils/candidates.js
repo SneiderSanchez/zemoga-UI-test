@@ -4,7 +4,7 @@ export const candidatesBase = [
     name: "Kanye West",
     imageUrl: "./kanye.png",
     category: "Entertaiment",
-    startDate: "x",
+    startDate: "2021-02-10T08:02:17-05:00",
     description:
       "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
     upVotes: 2,
@@ -15,7 +15,7 @@ export const candidatesBase = [
     name: "Mark Zuckerberg",
     imageUrl: "./mark.png",
     category: "Business",
-    startDate: "x",
+    startDate: "2021-02-02T08:02:17-05:00",
     description:
       "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
     upVotes: 2,
@@ -26,7 +26,7 @@ export const candidatesBase = [
     name: "Cristina Fernández de Kirchner",
     imageUrl: "./cristina.png",
     category: "Politics",
-    startDate: "x",
+    startDate: "2020-12-02T08:02:17-05:00",
     description:
       "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
     upVotes: 2,
@@ -37,7 +37,7 @@ export const candidatesBase = [
     name: "Malala Yousafzai",
     imageUrl: "./malala.png",
     category: "Entertaiment",
-    startDate: "x",
+    startDate: "2020-10-02T08:02:17-05:00",
     description:
       "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
     upVotes: 2,

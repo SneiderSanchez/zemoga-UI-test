@@ -18,6 +18,7 @@ import {
 } from "./styles";
 import { darkTheme } from "../../utils/themes";
 import { ThemeProvider, withTheme } from "styled-components";
+import moment from "moment";
 
 const CandidateCard = ({ candidate }) => {
   const total = candidate.upVotes + candidate.downVotes;
@@ -27,6 +28,8 @@ const CandidateCard = ({ candidate }) => {
     highestValue:
       candidate.upVotes >= candidate.downVotes ? "thumbsUp" : "thumbsDown",
   };
+
+  const candidateDate = moment(candidate.startDate).fromNow();
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -39,7 +42,7 @@ const CandidateCard = ({ candidate }) => {
           <div>
             <Name>{candidate.name}</Name>
             <Date>
-              <strong>{candidate.startDate} ago</strong> in {candidate.category}
+              <strong>{candidateDate}</strong> in {candidate.category}
             </Date>
             <Description>{candidate.description}</Description>
             <VotesHandler>
