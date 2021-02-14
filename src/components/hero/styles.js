@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { lightTheme, darkTheme } from "../../utils/themes";
-import Card from "../card";
+import Card from "../Card";
 
 export const VoteBox = styled.div`
   display: flex;

@@ -16,7 +16,7 @@ import {
   ThumbsUp,
   VoteBox,
 } from "./styles";
-import Header from "../header";
+import Header from "../Header";
 import { lightTheme, darkTheme } from "../../utils/themes";
 import { ThemeProvider, withTheme } from "styled-components";
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Card from "../card";
-import Button from "../button";
+import Card from "../Card";
+import Button from "../Button";
 
 export const SubmitCard = styled(Card)`
   display: flex;

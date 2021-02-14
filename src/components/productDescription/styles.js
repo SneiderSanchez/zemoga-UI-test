@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Card from "../card";
+import Card from "../Card";
 
 export const DescriptionCard = styled(Card)`
   display: flex;

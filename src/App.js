@@ -1,15 +1,15 @@
 import "./App.css";
-import Hero from "./components/hero";
+import Hero from "./components/Hero";
 import React from "react";
 import { GlobalStyles } from "./components/GlobalStyles";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./utils/themes";
-import { Toggle } from "./components/toggle";
+import { Toggle } from "./components/Toggle";
 import { useDarkMode } from "./hooks/useDarkMode";
-import Footer from "./components/footer";
-import SubmitName from "./components/submitName";
 import { MainContent } from "./app.styles";
-import ProductDescription from "./components/productDescription";
+import Footer from "./components/Footer";
+import ProductDescription from "./components/ProductDescription";
+import SubmitName from "./components/SubmitName";
 
 function App() {
   const [theme, setTheme] = useDarkMode();
@@ -27,7 +27,6 @@ function App() {
         <MainContent>
           <Toggle theme={theme} toggleTheme={toggleTheme} />
           <ProductDescription />
-
           <SubmitName />
         </MainContent>
         <Footer />
