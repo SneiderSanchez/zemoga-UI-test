@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "./utils/breakpoints";
 
 export const MainContent = styled.main`
   margin: 3% 8%;
@@ -11,6 +12,11 @@ export const CandidatesContainer = styled.section`
   margin-top: -20px;
   margin-left: -20px;
   justify-content: center;
+
+  @media only screen and ${device.sm}, only screen and ${device.md} {
+    margin-top: -50px;
+    margin-left: -50px;
+  }
 `;
 
 export const SectionTitle = styled.h2`

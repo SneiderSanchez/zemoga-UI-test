@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../utils/breakpoints";
 
 export const ToggleButton = styled.button`
   border: 2px solid ${({ theme }) => theme.border};
@@ -7,6 +8,7 @@ export const ToggleButton = styled.button`
   display: flex;
   font-size: 0.5rem;
   justify-content: space-between;
+  align-items: center;
   overflow: hidden;
   padding: 0.5rem;
   position: relative;
@@ -37,10 +39,15 @@ export const ToggleWrapper = styled.div`
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
+  text-align: justify;
   padding: 0 8%;
   margin: 40px 0;
   h5 {
     width: 40%;
     font-weight: 300;
+  }
+  @media only screen and ${device.sm} {
+    margin-top: 0px;
+    -webkit-tap-highlight-color: transparent;
   }
 `;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Card from "../Card";
 import Button from "../Button";
+import { device } from "../../utils/breakpoints";
 
 export const SubmitCard = styled(Card)`
   display: flex;
@@ -19,6 +20,9 @@ export const SubmitCard = styled(Card)`
   img {
     margin-left: 20px;
   }
+  @media only screen and ${device.sm} {
+    height: 50px;
+  }
 `;
 
 export const VoteButtom = styled(Button)`
@@ -28,6 +32,11 @@ export const VoteButtom = styled(Button)`
   height: 100%;
   width: 210px;
   font-size: 1.3em;
+  margin-left: 15px;
+  @media only screen and ${device.sm} {
+    width: 125px;
+    font-size: 1em;
+  }
 `;
 
 export const Description = styled.p`
@@ -35,4 +44,10 @@ export const Description = styled.p`
   flex: 1;
   font-size: 2em;
   font-weight: 300;
+  @media only screen and ${device.sm} {
+    font-size: 1.5em;
+  }
+  @media only screen and ${device.md} {
+    font-size: 1.8em;
+  }
 `;

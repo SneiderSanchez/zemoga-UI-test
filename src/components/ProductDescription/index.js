@@ -1,5 +1,4 @@
 import React from "react";
-
 import { DescriptionCard, Quote, DescriptionText } from "./styles";
 
 const ProductDescription = () => {

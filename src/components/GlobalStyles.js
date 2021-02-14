@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { device } from "../utils/breakpoints";
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -15,5 +16,13 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text};
     font-family: 'Lato', sans-serif;
     transition: all 0.50s linear;
+    font-size: 16px;
+    @media only screen and ${device.sm} {
+      font-size: 12px;
+    }
+
+    @media only screen and ${device.md} {
+      font-size: 14px;
+    }
   }
 `;

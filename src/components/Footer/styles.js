@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../utils/breakpoints";
 
 export const Footer = styled.footer`
   display: flex;
@@ -32,6 +33,12 @@ export const Footer = styled.footer`
     color: inherit;
     text-decoration: none;
   }
+  @media only screen and ${device.sm} {
+    flex-direction: column;
+    ul {
+      justify-content: center;
+    }
+  }
 `;
 
 export const SocialMedia = styled.div`
@@ -48,5 +55,8 @@ export const SocialMedia = styled.div`
     width: 25px;
     height: 25px;
     margin-right: 20px;
+  }
+  @media only screen and ${device.sm} {
+    margin: 40px 0;
   }
 `;

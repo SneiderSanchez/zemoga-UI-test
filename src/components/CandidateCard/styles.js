@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import Button from "../Button";
+import { device } from "../../utils/breakpoints";
 
 const votetIcon = css`
   margin-right: 20px;
@@ -9,6 +10,7 @@ const votetIcon = css`
     padding: 10px;
   }
 `;
+
 export const VotesHandler = styled.div`
   display: flex;
   align-items: center;
@@ -40,14 +42,17 @@ export const CandidateContainer = styled.div`
   align-items: flex-end;
   justify-content: flex-end;
   flex-direction: column;
+  transition: all 0.6s;
+  height: 525px;
+  width: 500px;
+  margin-top: 20px;
+  margin-left: 20px;
   background-repeat: no-repeat;
   background-image: linear-gradient(
       rgba(0, 0, 0, 0),
       rgba(${({ theme }) => theme.lightBackground}, 1)
     ),
     url(${({ imageUrl }) => imageUrl});
-  height: 525px;
-  transform: scale(1, 1);
   color: ${({ theme }) => theme.text};
   background-position-y: center;
 
@@ -56,10 +61,20 @@ export const CandidateContainer = styled.div`
     background-size: 120% 120%;
     background-position-x: left;
   }
-  transition: all 0.6s;
-  width: 500px;
-  margin-top: 20px;
-  margin-left: 20px;
+
+  @media only screen and ${device.sm} {
+    width: 375px;
+    height: 425px;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+  @media only screen and ${device.md} {
+    width: 350px;
+    height: 450px;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
 `;
 
 export const InfoContainer = styled.div`
@@ -73,6 +88,12 @@ export const InfoContainer = styled.div`
 
 export const Name = styled.p`
   font-size: 2.8rem;
+  @media only screen and ${device.sm} {
+    font-size: 2rem;
+  }
+  @media only screen and ${device.md} {
+    font-size: 2.5rem;
+  }
 `;
 
 export const Date = styled.p`
@@ -80,14 +101,19 @@ export const Date = styled.p`
 `;
 
 export const Description = styled.p`
-  margin: 5% 0;
+  margin: 25px 0;
   font-size: 1rem;
   font-weight: 300;
+  width: 90%;
+  @media only screen and ${device.sm} {
+    font-size: 0.8rem;
+    margin: 20px 0;
+  }
 `;
 
 export const VotesResults = styled.img`
   display: flex;
-  // fix this, find a better way to thumbsup to be a thte same heihgt of p name
+  // fix this, find a better way to thumbsup to be a the same heihgt of p name
   margin-top: 2%;
   margin-right: 2%;
   height: 1.3em;
@@ -121,9 +147,12 @@ export const DownVotes = styled.div`
 `;
 
 export const ThumbIcon = styled.img`
-  height: 30px;
+  height: 25px;
   margin: 0 10px;
   background: solid;
+  @media only screen and ${device.sm}, only screen and ${device.md} {
+    height: 20px;
+  }
 `;
 
 export const Percentage = styled.p`

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../utils/breakpoints";
 
 export const HeaderContainer = styled.nav`
   display: flex;
@@ -11,6 +12,9 @@ export const HeaderContainer = styled.nav`
   );
   color: ${({ theme }) => theme.text};
   padding: 0 8%;
+  @media only screen and ${device.sm} {
+    height: 100px;
+  }
 `;
 
 export const HeaderLogo = styled.div`
@@ -19,6 +23,10 @@ export const HeaderLogo = styled.div`
   justify-content: space-between;
   font-size: 2.5em;
   font-weight: 800;
+  @media only screen and ${device.sm}, only screen and ${device.md} {
+    width: 30%;
+    font-size: 2em;
+  }
 `;
 
 export const NavHeader = styled.ul`
@@ -28,6 +36,9 @@ export const NavHeader = styled.ul`
   justify-content: flex-end;
   align-items: center;
   list-style: none;
+  @media only screen and ${device.sm}, only screen and ${device.md} {
+    width: 70%;
+  }
 `;
 
 export const NavItem = styled.li`
