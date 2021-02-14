@@ -7,6 +7,8 @@ import { lightTheme, darkTheme } from "./utils/themes";
 import { Toggle } from "./components/toggle";
 import { useDarkMode } from "./hooks/useDarkMode";
 import Footer from "./components/footer";
+import SubmitName from "./components/submitName";
+import { MainContent } from "./app.styles";
 
 function App() {
   const [theme, setTheme] = useDarkMode();
@@ -21,7 +23,11 @@ function App() {
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
         <Hero />
-        <Toggle theme={theme} toggleTheme={toggleTheme} />
+        <MainContent>
+          <Toggle theme={theme} toggleTheme={toggleTheme} />
+
+          <SubmitName />
+        </MainContent>
         <Footer />
       </ThemeProvider>
     </>
