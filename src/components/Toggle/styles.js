@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-export const ToggleContainer = styled.button`
+export const ToggleButton = styled.button`
   border: 2px solid ${({ theme }) => theme.border};
   border-radius: 30px;
   cursor: pointer;
   display: flex;
   font-size: 0.5rem;
   justify-content: space-between;
-  margin: 0 auto;
   overflow: hidden;
   padding: 0.5rem;
   position: relative;
@@ -31,5 +30,17 @@ export const ToggleContainer = styled.button`
       transform: ${({ isLightTheme }) =>
         isLightTheme ? "translateY(-100px)" : "translateY(0)"};
     }
+  }
+`;
+
+export const ToggleWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 0 8%;
+  margin: 40px 0;
+  h5 {
+    width: 40%;
+    font-weight: 300;
   }
 `;
