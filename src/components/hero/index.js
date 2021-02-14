@@ -17,7 +17,6 @@ import {
   VoteBox,
 } from "./styles";
 import Header from "../header";
-import Card from "../card";
 import { lightTheme, darkTheme } from "../../utils/themes";
 import { ThemeProvider, withTheme } from "styled-components";
 

@@ -9,6 +9,7 @@ import { useDarkMode } from "./hooks/useDarkMode";
 import Footer from "./components/footer";
 import SubmitName from "./components/submitName";
 import { MainContent } from "./app.styles";
+import ProductDescription from "./components/productDescription";
 
 function App() {
   const [theme, setTheme] = useDarkMode();
@@ -25,6 +26,7 @@ function App() {
         <Hero />
         <MainContent>
           <Toggle theme={theme} toggleTheme={toggleTheme} />
+          <ProductDescription />
 
           <SubmitName />
         </MainContent>
