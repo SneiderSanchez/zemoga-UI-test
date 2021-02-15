@@ -20,6 +20,7 @@ import { darkTheme } from "../../utils/themes";
 import { ThemeProvider, withTheme } from "styled-components";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import moment from "moment";
 
 const CandidateCard = ({ candidateData }) => {
   const [candidate, setCandidate] = useState(candidateData);
@@ -33,6 +34,7 @@ const CandidateCard = ({ candidateData }) => {
     highestValue:
       candidate.upVotes >= candidate.downVotes ? "thumbsUp" : "thumbsDown",
   };
+  const candidateDate = moment(candidate.startDate).fromNow();
 
   const handleNewVote = () => {
     setSelectedOption("");
@@ -75,7 +77,7 @@ const CandidateCard = ({ candidateData }) => {
           <div>
             <Name>{candidate.name}</Name>
             <Date>
-              <strong>{candidate.startDate} ago</strong> in {candidate.category}
+              <strong>{candidateDate}</strong> in {candidate.category}
             </Date>
             <Description>
               {hasVoted ? "Thank You for voting!" : candidate.description}
@@ -87,6 +89,7 @@ const CandidateCard = ({ candidateData }) => {
                     handleClick={() => {
                       setSelectedOption("upVotes");
                     }}
+                    isSelected={selectedOption === "upVotes"}
                   >
                     <img src={"./thumbsUp.png"} alt={"thumbsUp"}></img>
                   </UpVoteButtom>
@@ -94,6 +97,7 @@ const CandidateCard = ({ candidateData }) => {
                     handleClick={() => {
                       setSelectedOption("downVotes");
                     }}
+                    isSelected={selectedOption === "downVotes"}
                   >
                     <img src={"./thumbsDown.png"} alt={"thumbsDown"}></img>
                   </DownVoteButtom>
