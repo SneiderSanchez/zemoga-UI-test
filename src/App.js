@@ -5,6 +5,7 @@ import { Toggle } from "./components/Toggle";
 import { useDarkMode } from "./hooks/useDarkMode";
 import { lightTheme, darkTheme } from "./utils";
 import Footer from "./components/Footer";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [theme, setTheme] = useDarkMode();
@@ -14,9 +15,17 @@ function App() {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
+  const toastOptions = {
+    style: {
+      color: themeMode.text,
+      background: themeMode.body,
+    },
+  };
+
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
+      <Toaster toastOptions={toastOptions} />
       <Router />
       <Footer />
       <Toggle theme={theme} toggleTheme={toggleTheme} />
