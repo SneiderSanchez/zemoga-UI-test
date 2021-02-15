@@ -7,6 +7,7 @@ import { lightTheme, darkTheme } from "./utils";
 import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
 import { BrowserRouter as Router } from "react-router-dom";
+import { FooterWrapper } from "./app.styles";
 
 function App() {
   const [theme, setTheme] = useDarkMode();
@@ -30,8 +31,10 @@ function App() {
         <GlobalStyles />
         <Toaster toastOptions={toastOptions} />
         <Routes />
-        <Footer />
-        <Toggle theme={theme} toggleTheme={toggleTheme} />
+        <FooterWrapper>
+          <Footer />
+          <Toggle theme={theme} toggleTheme={toggleTheme} />
+        </FooterWrapper>
       </ThemeProvider>
     </Router>
   );

@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { lightTheme, darkTheme } from "../../utils/themes";
 import Card from "../Card";
-import { device } from "../../utils/breakpoints";
+import { device } from "../../utils";
 import { WikipediaSvg } from "../Icons";
 
 export const VoteBox = styled.div`

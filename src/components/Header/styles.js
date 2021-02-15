@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../utils/breakpoints";
+import { device } from "../../utils";
 import { Link } from "react-router-dom";
 import { SearchSvg } from "../Icons";
 

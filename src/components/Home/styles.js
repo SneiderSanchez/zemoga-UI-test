@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../utils/breakpoints";
+import { device } from "../../utils";
 
 export const MainContent = styled.main`
   display: flex;
@@ -16,6 +16,7 @@ export const MainContent = styled.main`
     max-width: 400px;
   }
   @media only screen and ${device.md} {
+    padding: 0 20px;
     max-width: 800px;
   }
 `;

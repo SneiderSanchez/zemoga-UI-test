@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import Button from "../Button";
-import { device } from "../../utils/breakpoints";
+import { device } from "../../utils";
 
 const votetIcon = css`
   margin-right: 15px;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../utils/breakpoints";
+import { device } from "../../utils";
 
 export const ToggleButton = styled.button`
   border: 2px solid ${({ theme }) => theme.border};

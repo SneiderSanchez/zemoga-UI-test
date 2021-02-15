@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Card from "../Card";
-import { device } from "../../utils/breakpoints";
+import { device } from "../../utils";
 import { CrossSvg } from "../Icons";
 
 export const DescriptionCard = styled(Card)`

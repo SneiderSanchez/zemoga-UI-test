@@ -18,8 +18,20 @@ const FooterComponent = () => {
       </ul>
       <SocialMedia>
         <p> Follow Us</p>
-        <FacebookIcon />
-        <TwitterIcon />
+        <a
+          href="https:/www.facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FacebookIcon />
+        </a>
+        <a
+          href="https:/www.twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <TwitterIcon />
+        </a>
       </SocialMedia>
     </Footer>
   );

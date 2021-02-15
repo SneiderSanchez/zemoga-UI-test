@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../utils/breakpoints";
+import { device } from "../../utils";
 import { FacebookSvg, TwitterSvg } from "../Icons";
 
 export const Footer = styled.footer`
@@ -12,11 +12,11 @@ export const Footer = styled.footer`
   background-position: top;
   background-size: 8px 1px;
   background-repeat: repeat-x;
-  margin: 50px 0;
+  // margin: 50px 0;
   padding-top: 40px;
   font-size: 0.8em;
   font-weight: 300;
-  margin: 3% 8%;
+  margin: 30px 40px;
 
   ul {
     display: flex;
@@ -31,7 +31,12 @@ export const Footer = styled.footer`
     color: inherit;
     text-decoration: none;
   }
+  @media only screen and ${device.md} {
+    margin: 30px 0px;
+  }
   @media only screen and ${device.sm} {
+    margin: 30px 0px;
+
     flex-direction: column;
     ul {
       justify-content: center;
@@ -49,7 +54,7 @@ export const SocialMedia = styled.div`
     margin-right: 20px;
   }
 
-  img {
+  a svg {
     width: 25px;
     height: 25px;
     margin-right: 20px;

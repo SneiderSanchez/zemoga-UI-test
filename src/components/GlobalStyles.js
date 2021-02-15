@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { device } from "../utils/breakpoints";
+import { device } from "../utils";
 
 export const GlobalStyles = createGlobalStyle`
 

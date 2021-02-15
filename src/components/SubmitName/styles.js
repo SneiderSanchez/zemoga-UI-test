@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Card from "../Card";
 import Button from "../Button";
-import { device } from "../../utils/breakpoints";
+import { device } from "../../utils";
 
 export const SubmitCard = styled(Card)`
   display: flex;
