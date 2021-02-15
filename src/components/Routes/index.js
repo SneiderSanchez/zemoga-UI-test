@@ -1,16 +1,18 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Root from "../Home";
-import Login from "../views/Login";
-import HowItWorks from "../views/HowItWorks";
-import PastTrials from "../views/PastTrials";
-import ContactUs from "../views/ContactUs";
-import Privacy from "../views/Privacy";
-import Search from "../views/Search";
-import Terms from "../views/Terms";
-import PageNotFound from "../views/PageNotFound";
+import {
+  Login,
+  HowItWorks,
+  PastTrials,
+  ContactUs,
+  Privacy,
+  Search,
+  Terms,
+  PageNotFound,
+} from "../views";
 
-export default function Router() {
+export default function Routes() {
   return (
     <Switch>
       <Route exact path="/">

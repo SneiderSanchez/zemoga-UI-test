@@ -67,12 +67,12 @@ export const CandidateContainer = styled.div`
     margin-right: 40px;
   }
   @media only screen and ${device.sm} {
-    width: 375px;
+    width: 390px;
     height: 425px;
     margin-left: 0;
     flex: 1;
     &:nth-child(odd) {
-      margin-right: 0;
+      margin-right: 0px;
     }
   }
 

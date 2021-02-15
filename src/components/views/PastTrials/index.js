@@ -7,7 +7,7 @@ const PastTrials = () => {
     <PageContainer background="./office.jpg">
       <Header />
       <div>
-        <PageMessage>Welcome to PastTrials :)</PageMessage>
+        <PageMessage>Welcome to Past Trials :)</PageMessage>
       </div>
     </PageContainer>
   );

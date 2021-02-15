@@ -11,6 +11,10 @@ export const MainContent = styled.main`
   width: 90%;
   max-width: 1000px;
 
+  @media only screen and ${device.sm} {
+    padding: 0 20px;
+    max-width: 400px;
+  }
   @media only screen and ${device.md} {
     max-width: 800px;
   }
@@ -23,6 +27,10 @@ export const CandidatesContainer = styled.section`
   width: 100%;
   margin: 0;
   max-width: 1100px;
+
+  @media only screen and ${device.sm} {
+    max-width: 400px;
+  }
 
   @media only screen and ${device.md} {
     max-width: 800px;

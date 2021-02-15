@@ -2,15 +2,15 @@ import React from "react";
 import { PageContainer, PageMessage } from "./styles";
 import Header from "../../Header";
 
-const Login = () => {
+const Page = () => {
   return (
     <PageContainer background="./office.jpg">
       <Header />
       <div>
-        <PageMessage>Welcome to Login :)</PageMessage>
+        <PageMessage></PageMessage>
       </div>
     </PageContainer>
   );
 };
 
-export default Login;
+export default Page;

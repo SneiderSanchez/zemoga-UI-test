@@ -7,7 +7,7 @@ const HowItWorks = () => {
     <PageContainer background="./office.jpg">
       <Header />
       <div>
-        <PageMessage>Welcome to HowItWorks :)</PageMessage>
+        <PageMessage>Welcome to How It Works :)</PageMessage>
       </div>
     </PageContainer>
   );

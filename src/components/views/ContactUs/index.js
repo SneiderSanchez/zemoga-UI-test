@@ -7,7 +7,7 @@ const ContactUs = () => {
     <PageContainer background="./office.jpg">
       <Header />
       <div>
-        <PageMessage>Welcome to ContactUs :)</PageMessage>
+        <PageMessage>Welcome to Contact Us :)</PageMessage>
       </div>
     </PageContainer>
   );
