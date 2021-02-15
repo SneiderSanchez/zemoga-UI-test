@@ -3,11 +3,11 @@ import Button from "../Button";
 import { device } from "../../utils/breakpoints";
 
 const votetIcon = css`
-  margin-right: 20px;
+  margin-right: 15px;
   img {
     height: 18px;
     width: 18px;
-    padding: 10px;
+    padding: 3px;
   }
 `;
 
@@ -19,21 +19,21 @@ export const VotesHandler = styled.div`
   background-repeat: no-repeat;
 `;
 
-export const UpVoteButtom = styled(Button)`
+export const UpVoteButton = styled(Button)`
   background-color: rgba(${({ theme }) => theme.thumbsUp}, 1);
   ${votetIcon}
-  border: 2px solid ${({ isSelected, theme }) =>
+  border: 3px solid ${({ isSelected, theme }) =>
     isSelected ? theme.text : "transparent"};
 `;
 
-export const DownVoteButtom = styled(Button)`
+export const DownVoteButton = styled(Button)`
   background-color: rgba(${({ theme }) => theme.thumbsDown}, 1);
   ${votetIcon}
-  border: 2px solid ${({ isSelected, theme }) =>
+  border: 3px solid ${({ isSelected, theme }) =>
     isSelected ? theme.text : "transparent"};
 `;
 
-export const VoteButtom = styled(Button)`
+export const VoteButton = styled(Button)`
   color: ${({ theme }) => theme.text};
   border: 1px solid ${({ theme }) => theme.text};
   background-color: transparent;
@@ -48,9 +48,8 @@ export const CandidateContainer = styled.div`
   flex-direction: column;
   transition: all 0.6s;
   height: 525px;
-  width: 500px;
-  margin-top: 20px;
-  margin-left: 20px;
+  width: 480px;
+  margin-top: 40px;
   background-repeat: no-repeat;
   background-image: linear-gradient(
       rgba(0, 0, 0, 0),
@@ -58,26 +57,32 @@ export const CandidateContainer = styled.div`
     ),
     url(${({ imageUrl }) => imageUrl});
   color: ${({ theme }) => theme.text};
-  background-position-y: center;
+  background-position-y: bottom;
 
-  background-size: 110% 110%;
+  background-size: 100% 100%;
   &:hover {
-    background-size: 120% 120%;
-    background-position-x: left;
+    background-size: 110% 110%;
   }
-
+  &:nth-child(odd) {
+    margin-right: 40px;
+  }
   @media only screen and ${device.sm} {
     width: 375px;
     height: 425px;
-    margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 0;
+    flex: 1;
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
   }
 
   @media only screen and ${device.md} {
-    width: 350px;
-    height: 450px;
-    margin-top: 50px;
-    margin-left: 50px;
+    width: 390px;
+    height: 425px;
+    margin-left: 0px;
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
   }
 `;
 

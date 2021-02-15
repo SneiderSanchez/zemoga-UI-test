@@ -4,9 +4,6 @@ import { FacebookSvg, TwitterSvg } from "../Icons";
 
 export const Footer = styled.footer`
   display: flex;
-  // border-top: 1px dotted ${({ theme }) => theme.text};
-
-  // Hack found?
   background-image: linear-gradient(
     to right,
     ${({ theme }) => theme.text} 10%,

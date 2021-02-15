@@ -7,7 +7,6 @@ export const SubmitCard = styled(Card)`
   display: flex;
   align-items: center;
   height: 60px;
-  background-color: red;
 
   background-image: linear-gradient(
       rgba(${({ theme }) => theme.lightBackground}, 0.8),
@@ -15,7 +14,7 @@ export const SubmitCard = styled(Card)`
     ),
     url(${({ image }) => image});
   background-position: center;
-  padding: 25px 30px;
+  padding: 10px 20px;
   margin: 40px 0;
   img {
     margin-left: 20px;
@@ -25,12 +24,12 @@ export const SubmitCard = styled(Card)`
   }
 `;
 
-export const VoteButtom = styled(Button)`
+export const VoteButton = styled(Button)`
   color: ${({ theme }) => theme.text};
-  border: 2px solid ${({ theme }) => theme.text};
+  border: 3px solid ${({ theme }) => theme.text};
   background-color: transparent;
-  height: 100%;
-  width: 210px;
+  height: 80%;
+  width: 200px;
   font-size: 1.3em;
   margin-left: 15px;
   @media only screen and ${device.sm} {

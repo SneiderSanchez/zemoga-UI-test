@@ -7,8 +7,8 @@ export const candidatesBase = [
     startDate: "2021-02-10T08:02:17-05:00",
     description:
       "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
-    upVotes: 2,
-    downVotes: 1,
+    upVotes: 32,
+    downVotes: 18,
   },
   {
     id: 2,
@@ -18,8 +18,8 @@ export const candidatesBase = [
     startDate: "2021-02-02T08:02:17-05:00",
     description:
       "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
-    upVotes: 2,
-    downVotes: 1,
+    upVotes: 18,
+    downVotes: 32,
   },
   {
     id: 3,
@@ -29,8 +29,8 @@ export const candidatesBase = [
     startDate: "2020-12-02T08:02:17-05:00",
     description:
       "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
-    upVotes: 2,
-    downVotes: 1,
+    upVotes: 18,
+    downVotes: 32,
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ export const candidatesBase = [
     startDate: "2020-10-02T08:02:17-05:00",
     description:
       "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
-    upVotes: 2,
-    downVotes: 1,
+    upVotes: 32,
+    downVotes: 18,
   },
 ];

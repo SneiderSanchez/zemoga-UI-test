@@ -23,7 +23,9 @@ import { ThemeProvider, withTheme } from "styled-components";
 const Hero = ({ theme }) => {
   return (
     <HeroContainer background={`./pope.png`}>
-      <Header />
+      <ThemeProvider theme={darkTheme}>
+        <Header />
+      </ThemeProvider>
       <HeroWrapper>
         <PersonPresentation className={"variant-blured"}>
           <div>

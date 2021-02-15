@@ -11,9 +11,9 @@ import {
   ThumbIcon,
   Percentage,
   VotesSummary,
-  VoteButtom,
-  DownVoteButtom,
-  UpVoteButtom,
+  VoteButton,
+  DownVoteButton,
+  UpVoteButton,
   VotesHandler,
 } from "./styles";
 import { darkTheme } from "../../utils/themes";
@@ -85,27 +85,27 @@ const CandidateCard = ({ candidateData }) => {
             <VotesHandler>
               {!hasVoted ? (
                 <>
-                  <UpVoteButtom
+                  <UpVoteButton
                     handleClick={() => {
                       setSelectedOption("upVotes");
                     }}
                     isSelected={selectedOption === "upVotes"}
                   >
                     <img src={"./thumbsUp.png"} alt={"thumbsUp"}></img>
-                  </UpVoteButtom>
-                  <DownVoteButtom
+                  </UpVoteButton>
+                  <DownVoteButton
                     handleClick={() => {
                       setSelectedOption("downVotes");
                     }}
                     isSelected={selectedOption === "downVotes"}
                   >
                     <img src={"./thumbsDown.png"} alt={"thumbsDown"}></img>
-                  </DownVoteButtom>
+                  </DownVoteButton>
                 </>
               ) : (
                 ""
               )}
-              <VoteButtom
+              <VoteButton
                 handleClick={() => {
                   if (!selectedOption.length && !hasVoted) {
                     toast.error("Please select one option!");
@@ -120,7 +120,7 @@ const CandidateCard = ({ candidateData }) => {
                 }}
               >
                 {!hasVoted ? "Vote Now" : "Vote Again"}
-              </VoteButtom>
+              </VoteButton>
             </VotesHandler>
           </div>
         </InfoContainer>

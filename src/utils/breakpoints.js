@@ -1,7 +1,7 @@
 const size = {
   sm: "640px",
-  md: "641px-1007px",
-  lg: "1008px",
+  md: "641px-1129px",
+  lg: "1130px",
 };
 const mdSplit = size.md.split("-");
 const device = {
