@@ -5,8 +5,8 @@ import { device } from "../../utils/breakpoints";
 const votetIcon = css`
   margin-right: 20px;
   img {
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
     padding: 10px;
   }
 `;
@@ -22,11 +22,15 @@ export const VotesHandler = styled.div`
 export const UpVoteButtom = styled(Button)`
   background-color: rgba(${({ theme }) => theme.thumbsUp}, 1);
   ${votetIcon}
+  border: 2px solid ${({ isSelected, theme }) =>
+    isSelected ? theme.text : "transparent"};
 `;
 
 export const DownVoteButtom = styled(Button)`
   background-color: rgba(${({ theme }) => theme.thumbsDown}, 1);
   ${votetIcon}
+  border: 2px solid ${({ isSelected, theme }) =>
+    isSelected ? theme.text : "transparent"};
 `;
 
 export const VoteButtom = styled(Button)`
