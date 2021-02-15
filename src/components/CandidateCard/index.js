@@ -18,9 +18,14 @@ import {
 } from "./styles";
 import { darkTheme } from "../../utils/themes";
 import { ThemeProvider, withTheme } from "styled-components";
-import moment from "moment";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
-const CandidateCard = ({ candidate }) => {
+const CandidateCard = ({ candidateData }) => {
+  const [candidate, setCandidate] = useState(candidateData);
+  const [selectedOption, setSelectedOption] = useState("");
+  const [hasVoted, setHasVoted] = useState(false);
+
   const total = candidate.upVotes + candidate.downVotes;
   const percentage = {
     up: ((candidate.upVotes * 100) / total).toFixed(0),
@@ -29,7 +34,35 @@ const CandidateCard = ({ candidate }) => {
       candidate.upVotes >= candidate.downVotes ? "thumbsUp" : "thumbsDown",
   };
 
-  const candidateDate = moment(candidate.startDate).fromNow();
+  const handleNewVote = () => {
+    setSelectedOption("");
+    setHasVoted(true);
+    const data = window.localStorage.getItem("candidates");
+    const oldCandidates = data && data.length ? JSON.parse(data) : [];
+    const updatedCandidates = oldCandidates.map((item) =>
+      item.id === candidate.id
+        ? {
+            ...candidate,
+            [selectedOption]: item[selectedOption] + 1,
+          }
+        : item
+    );
+    if (updatedCandidates.length) {
+      window.localStorage.setItem(
+        "candidates",
+        JSON.stringify(updatedCandidates)
+      );
+      setCandidate((prevState) => {
+        return {
+          ...prevState,
+          [selectedOption]: prevState[selectedOption] + 1,
+        };
+      });
+      toast.success("Vote Saved Succesfully!");
+    } else {
+      toast.error("We have a problem saving your vote, try again later");
+    }
+  };
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -42,18 +75,48 @@ const CandidateCard = ({ candidate }) => {
           <div>
             <Name>{candidate.name}</Name>
             <Date>
-              <strong>{candidateDate}</strong> in {candidate.category}
+              <strong>{candidate.startDate} ago</strong> in {candidate.category}
             </Date>
-            <Description>{candidate.description}</Description>
+            <Description>
+              {hasVoted ? "Thank You for voting!" : candidate.description}
+            </Description>
             <VotesHandler>
-              <UpVoteButtom handleClick={() => {}}>
-                <img src={"./thumbsUp.png"} alt={"thumbsUp"}></img>
-              </UpVoteButtom>
-              <DownVoteButtom handleClick={() => {}}>
-                <img src={"./thumbsDown.png"} alt={"thumbsDown"}></img>
-              </DownVoteButtom>
+              {!hasVoted ? (
+                <>
+                  <UpVoteButtom
+                    handleClick={() => {
+                      setSelectedOption("upVotes");
+                    }}
+                  >
+                    <img src={"./thumbsUp.png"} alt={"thumbsUp"}></img>
+                  </UpVoteButtom>
+                  <DownVoteButtom
+                    handleClick={() => {
+                      setSelectedOption("downVotes");
+                    }}
+                  >
+                    <img src={"./thumbsDown.png"} alt={"thumbsDown"}></img>
+                  </DownVoteButtom>
+                </>
+              ) : (
+                ""
+              )}
+              <VoteButtom
+                handleClick={() => {
+                  if (!selectedOption.length && !hasVoted) {
+                    toast.error("Please select one option!");
+                    return;
+                  }
 
-              <VoteButtom handleClick={() => {}}>Vote Now</VoteButtom>
+                  if (!hasVoted) {
+                    handleNewVote();
+                  } else {
+                    setHasVoted(false);
+                  }
+                }}
+              >
+                {!hasVoted ? "Vote Now" : "Vote Again"}
+              </VoteButtom>
             </VotesHandler>
           </div>
         </InfoContainer>
@@ -73,7 +136,7 @@ const CandidateCard = ({ candidate }) => {
 };
 
 CandidateCard.propTypes = {
-  candidate: object.isRequired,
+  candidateData: object.isRequired,
 };
 
 export default withTheme(CandidateCard);

@@ -6,9 +6,21 @@ import { candidatesBase } from "../../utils";
 //this should be a component?
 import ProductDescription from "../ProductDescription";
 import SubmitName from "../SubmitName";
+import { useEffect } from "react";
 
 function Home() {
-  const candidates = candidatesBase;
+  const savedCandidates = window.localStorage.getItem("candidates") || [];
+  const candidates =
+    savedCandidates && savedCandidates.length
+      ? JSON.parse(savedCandidates)
+      : candidatesBase;
+
+  useEffect(() => {
+    const savedCandidates = window.localStorage.getItem("candidates") || [];
+    if (!savedCandidates.length) {
+      window.localStorage.setItem("candidates", JSON.stringify(candidatesBase));
+    }
+  }, []);
 
   return (
     <>
@@ -18,7 +30,7 @@ function Home() {
         <SectionTitle>Votes</SectionTitle>
         <CandidatesContainer>
           {candidates.map((candidate) => (
-            <CandidateCard candidate={candidate} key={candidate.id} />
+            <CandidateCard candidateData={candidate} key={candidate.id} />
           ))}
         </CandidatesContainer>
         <SubmitName />
