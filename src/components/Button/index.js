@@ -5,7 +5,11 @@ import { ButtonContainer } from "./styles";
 
 const Button = ({ className, children, handleClick }) => {
   return (
-    <ButtonContainer className={className} onClick={handleClick}>
+    <ButtonContainer
+      data-testid="button"
+      className={className}
+      onClick={handleClick}
+    >
       {children}
     </ButtonContainer>
   );

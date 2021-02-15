@@ -82,8 +82,8 @@ const CandidateCard = ({ candidateData }) => {
             <Description>
               {hasVoted ? "Thank You for voting!" : candidate.description}
             </Description>
-            <VotesHandler>
-              {!hasVoted ? (
+            <VotesHandler data-testid="vote-buttons-wrapper">
+              {!hasVoted && (
                 <>
                   <UpVoteButton
                     handleClick={() => {
@@ -102,8 +102,6 @@ const CandidateCard = ({ candidateData }) => {
                     <img src={"./thumbsDown.png"} alt={"thumbsDown"}></img>
                   </DownVoteButton>
                 </>
-              ) : (
-                ""
               )}
               <VoteButton
                 handleClick={() => {
