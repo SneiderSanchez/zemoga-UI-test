@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+<h1 id="title" align="center">Welcome to zemoga-UI-test 👋</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+UI-test  created with ❤️ by Sneider Sanchez, You can see it running [here](https://ssanchez-zemoga-ui-test.vercel.app/) 
 
-## Available Scripts
+### 🔖 Table Of Contents
 
-In the project directory, you can run:
+- 🤔 [How To Use](#how-to-use)
+- 🚀 [Technologies](#technologies)
+- 🧪 [test](#test)
+- 😓 [What I'm Missing](#missing)
+- 👤 [Author](#author)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h2 id="how-to-use">🤔 How To Use</h2>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+> npm start
+```
+Then the app will be running at http://localhost:3000
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h2 id="technologies">🚀 Technologies</h2>
 
-### `npm run build`
+- [react](https://reactjs.org/): To build the html and user interactions.
+- [Create React App](https://github.com/facebook/create-react-app): To initial setup of the proyect.
+- [localStorage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage): To handle data and store it.
+- [styled-components](https://www.styled-components.com/): It's like SCSS with drugs. it combines the awesomeness of css with React.
+- [react-router-dom](https://www.i18next.com/): To handle routing.
+- [moment.js](https://momentjs.com/): To Better handling of dates (x time ago on Candidates Info).
+- [react-hot-toast](https://react-hot-toast.com/docs): To display beautiful notifications.
+- [puppeteer](https://pptr.dev/) : Used for E2E testing
+- [react testing Library](https://testing-library.com/docs/react-testing-library/intro/): Used for integration tests of the app.
+-  [JEST](https://jestjs.io/): Used as testing Framework 
+- [Vercel](https://vercel.com/): Used to deploy the app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h2 id="test"> 🧪 Test</h2>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Puppeteer](https://pptr.dev/) : Used for E2E testing
+-  [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/): Used for integration tests of the app.
+-  [JEST](https://jestjs.io/): Used as testing Framework 
+```
+> npm test
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Then you will see chromium running for E2E tests and the integration tests.
 
-### `npm run eject`
+<h2 id="missing"> 😓 What I'm Missing</h2>
+Due to time limitations, I think I can improve on:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Use a internationalization framework
+- More Test
+-  More Animations
+-  More mixins
+- Centralize mixins logic
+-  Better support on some components for toggle theme
+-  Create an API using Express and nodeJS
+- Use another technology to persist the data (Like a real DB)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h2 id="author">👤 Author</h2>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ ### Sneider Sanchez 
+<img width="60" src="https://avatars.githubusercontent.com/u/17282848?s=460&u=459b2d6d994275f365a2e21144ddd48b164aee81&v=4"/>
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Github: [@SneiderSanchez](https://github.com/SneiderSanchez)
+- LinkedIn: [@SneiderSanchez](https://www.linkedin.com/in/sneidersanchez)
 
-### Analyzing the Bundle Size
+[Back To The Top](#title)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
