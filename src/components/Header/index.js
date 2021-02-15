@@ -1,5 +1,11 @@
 import React from "react";
-import { HeaderLogo, HeaderContainer, NavHeader, NavItem } from "./styles";
+import {
+  HeaderLogo,
+  HeaderContainer,
+  NavHeader,
+  NavItem,
+  SearchIcon,
+} from "./styles";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -18,7 +24,7 @@ const Header = () => {
         </NavItem>
         <NavItem>
           <Link to="/search">
-            <img src="./search.svg" alt="search" />
+            <SearchIcon />
           </Link>
         </NavItem>
       </NavHeader>

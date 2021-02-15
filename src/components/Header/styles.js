@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { device } from "../../utils/breakpoints";
 import { Link } from "react-router-dom";
+import { SearchSvg } from "../Icons";
 
 export const HeaderContainer = styled.nav`
   display: flex;
@@ -54,4 +55,10 @@ export const NavItem = styled.li`
       width: 1em;
     }
   }
+`;
+
+export const SearchIcon = styled(SearchSvg)`
+  height: 1em;
+  width: 1em;
+  fill: ${({ theme }) => theme.text};
 `;

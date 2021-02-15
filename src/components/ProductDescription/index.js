@@ -1,5 +1,5 @@
 import React from "react";
-import { DescriptionCard, Quote, DescriptionText } from "./styles";
+import { DescriptionCard, Quote, DescriptionText, CrossIcon } from "./styles";
 
 const ProductDescription = () => {
   return (
@@ -13,7 +13,7 @@ const ProductDescription = () => {
         and everyone can speak out and speak freely. It’s easy: You share your
         opinion, we analyze and put the data in a public report.
       </DescriptionText>
-      <img src="./cross.svg" alt="cross"></img>
+      <CrossIcon />
     </DescriptionCard>
   );
 };

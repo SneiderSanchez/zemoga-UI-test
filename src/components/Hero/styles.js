@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import { lightTheme, darkTheme } from "../../utils/themes";
 import Card from "../Card";
 import { device } from "../../utils/breakpoints";
+import { WikipediaSvg } from "../Icons";
 
 export const VoteBox = styled.div`
   display: flex;
@@ -77,11 +78,12 @@ export const Description = styled.p`
   text-align: justify;
 `;
 
-export const MoreInfoLogo = styled.img`
+export const MoreInfoLogo = styled(WikipediaSvg)`
   width: 1.5em;
   height: 1.5em;
   display: inline-block;
   margin-right: 5px;
+  fill: ${({ theme }) => theme.text};
 `;
 
 export const MoreInfo = styled.a`
@@ -90,6 +92,7 @@ export const MoreInfo = styled.a`
   color: inherit;
   display: flex;
   width: fit-content;
+  text-decoration: underline;
 `;
 
 export const Question = styled.p`

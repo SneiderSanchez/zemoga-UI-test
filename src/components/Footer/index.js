@@ -1,6 +1,7 @@
 import React from "react";
-import { Footer, SocialMedia } from "./styles";
+import { Footer, SocialMedia, FacebookIcon, TwitterIcon } from "./styles";
 import { Link } from "react-router-dom";
+
 const FooterComponent = () => {
   return (
     <Footer>
@@ -17,8 +18,8 @@ const FooterComponent = () => {
       </ul>
       <SocialMedia>
         <p> Follow Us</p>
-        <img src="./facebook.svg" alt="facebook"></img>
-        <img src="./twitter.svg" alt="twitter"></img>
+        <FacebookIcon />
+        <TwitterIcon />
       </SocialMedia>
     </Footer>
   );

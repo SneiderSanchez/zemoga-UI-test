@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Card from "../Card";
 import { device } from "../../utils/breakpoints";
+import { CrossSvg } from "../Icons";
 
 export const DescriptionCard = styled(Card)`
   display: flex;
@@ -20,6 +21,16 @@ export const DescriptionCard = styled(Card)`
       width: 15px;
       height: 15px;
     }
+  }
+`;
+
+export const CrossIcon = styled(CrossSvg)`
+  width: 20px;
+  height: 20px;
+  fill: ${({ theme }) => theme.text};
+  @media only screen and ${device.sm} {
+    width: 15px;
+    height: 15px;
   }
 `;
 

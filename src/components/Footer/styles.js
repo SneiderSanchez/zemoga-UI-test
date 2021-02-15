@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../utils/breakpoints";
+import { FacebookSvg, TwitterSvg } from "../Icons";
 
 export const Footer = styled.footer`
   display: flex;
@@ -59,4 +60,18 @@ export const SocialMedia = styled.div`
   @media only screen and ${device.sm} {
     margin: 40px 0;
   }
+`;
+
+export const FacebookIcon = styled(FacebookSvg)`
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  fill: ${({ theme }) => theme.text};
+`;
+
+export const TwitterIcon = styled(TwitterSvg)`
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  fill: ${({ theme }) => theme.text};
 `;
